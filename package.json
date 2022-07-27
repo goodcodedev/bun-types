@@ -6,9 +6,13 @@
   "scripts": {
     "generate": "rm -rf ./dist && bun bundle.ts ./dist && prettier --write ./dist/types.d.ts",
     "prepublishOnly": "bun generate",
-    "fmt": "prettier --write *.d.ts"
+    "fmt": "prettier --write *.d.ts",
+    "genDoc": "rm -rf ./generated && node genDoc/genDoc.js"
   },
   "devDependencies": {
-    "prettier": "latest"
+    "prettier": "latest",
+    "typedoc": "^0.23.9",
+    "typedoc-plugin-markdown": "^3.13.4",
+    "concat-md": "^0.4.0"
   }
 }
